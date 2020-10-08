@@ -19,4 +19,4 @@ It is then possible to perform PCA on these vectors as you would any other data.
 
 An example of the first mode of variation of the human face is shown below, at +/- 3 standard deviations from the mean.
 
-![First mode of variation](httphttps://github.com/joebarnes1996/principal-modes-of-facial-variation/comparison.png)
+![First mode of variation](httphttps://github.com/joebarnes1996/principal-modes-of-facial-variation/comparison.png?raw=True)
