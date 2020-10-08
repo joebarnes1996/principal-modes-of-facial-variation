@@ -4,10 +4,10 @@ Principal component analysis (PCA) creates vectors which represent the rotation 
 
 Principal components can be applied to shape data to find the modes in which shapes vary the most. Here, shape data is represented as an array of x and y coordinates, i.e.
 
-S = [x_1, y_1,
-	 x_2, y_2,
-	 ..., ...,
-	 x_N, y_N]
+S = [[x_1, y_1],
+	 [x_2, y_2],
+	 [..., ...],
+	 [x_N, y_N]]
 
 where N is the number of coordinates that make up the shapes. 
 
