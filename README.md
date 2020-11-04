@@ -32,8 +32,8 @@ As well as the data relating to facial shape, I have also uploaded the mean faci
 
 To demonstrate this technique, the below images show the mean facial image morphed in the directions of +/- 3 standard deviations from the mean in the direction of the first 5 principal components.
 
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mode_1.png?raw=True)
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mode_2.png?raw=True)
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mode_3.png?raw=True)
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mode_4.png?raw=True)
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mode_5.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_1.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_2.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_3.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_4.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_5.png?raw=True)
