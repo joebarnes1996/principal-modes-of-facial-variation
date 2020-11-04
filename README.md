@@ -23,6 +23,6 @@ With each shape represented by a vector, one can standardise the data before per
 
 ## 2 - Implementation and results
 
-The shape data that I demonstrate this technique on is the shape data of human faces, extracted from 350 facial images. Though I can't show the facial images for anonymity reasons, I can show the mean face, which was taken by morphing each face to the same shape, and taking the mean of the image tensors. The mean facial image and mean facial features are shown below.
+The shape data that I demonstrate this technique on is the shape data of human faces, extracted from 350 facial images. Though I can't show the facial images for anonymity reasons, I can show the mean face, which was taken by morphing each face to the same shape, and taking the mean of the image tensors. The mean facial image and mean facial features are shown below.d
 
 ![First mode of variation](comparison.png?raw=True)
