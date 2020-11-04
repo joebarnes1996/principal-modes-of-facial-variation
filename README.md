@@ -23,7 +23,7 @@ With each shape represented by a vector, one can standardise the data before per
 
 ## 2 - Implementation and results
 
-The shape data I use to demonstrate this technique was used within my MSc dissertation project, and contains the facial images of 86 individuals. Each individual had 2 lab photos, and 2 selfies. Due to privacy, I cannot add these images to this repository, but I can upload their facial features (facial shape), which was extracted using the dlib-ml package.
+The shape data I use to demonstrate this technique was used within my MSc dissertation project, and contains the facial images of 86 individuals. Each individual had 2 lab photos (facial images taken under strict quality control, similar to passport photos), and 2 selfies. Due to privacy, I cannot add these images to this repository, but I can upload their facial features (facial shape), which was extracted using the dlib-ml package.
 
 As well as the data relating to facial shape, I have also uploaded the mean facial shape, and the mean facial image (found by morphing all faces to the same shape, before taking the mean of the image tensors. The mean facial shape and image are shown below.
 
@@ -31,7 +31,7 @@ As well as the data relating to facial shape, I have also uploaded the mean faci
 <img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/example_features.png" width="400">
 <img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mean_image.png" width="400">
 
-To demonstrate this technique, the below images show the mean facial image morphed in the directions of +/- 3 standard deviations from the mean in the direction of the first 5 principal components.
+To demonstrate this technique, the below images show the mean facial image morphed in the directions of +/- 3 standard deviations from the mean in the direction of the first 5 principal components. Interestingly, I found that principal components 1 and 3 related to the vertical and horizontal positioning of the camera, while principal component 4 related to the distance with which each photo was taken, introducing a fish-eye effect. Principal components 2 and 4 and 6 onward are believed to relate purely to deviations in facial shape.
 
 <img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_1.png" width="800">
 <img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/mode_2.png" width="800">
