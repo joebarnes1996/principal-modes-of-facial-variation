@@ -14,7 +14,7 @@ PCA relies on data being represented as column vectors, hence to perform PCA on 
 
 		[ x_1 ]
 		[ y_1 ]
-    S = [ ... ]
+    S    = 	[ ... ]
 		[ x_n ]
 		[ y_n ]
 
