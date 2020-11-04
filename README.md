@@ -12,10 +12,10 @@ Shapes can be mathematically represented as an array of x and y pairs. For examp
 
 PCA relies on data being represented as column vectors, hence to perform PCA on shape data, one first has to convert them into column vectors of alternating x and y coordinates, as shown below
 
-        [ x_1 ]
+	[ x_1 ]
 	[ y_1 ]
     S = [ ... ]
-        [ x_n ]
+	[ x_n ]
 	[ y_n ]
 
 With each shape represented by a vector, one can standardise the data before performing PCA following standard procedures. Having the principal components of shape data, it is easy to evaluate how shapes vary in the direction of each principal component. For example, the shape vectors across the first principal component can be evaluated as <img src="https://render.githubusercontent.com/render/math?math=\mu \pm v \sqrt{\lambda_i} \varphi_i">, where <img src="https://render.githubusercontent.com/render/math?math=\mu"> is the mean shape (equal to 0 in principal component space), <img src="https://render.githubusercontent.com/render/math?math=\varphi_i"> is the i-th principal component, <img src="https://render.githubusercontent.com/render/math?math=\lambda_i"> is the i-th eigenvalue (variance of the i-th principal component), and <img src="https://render.githubusercontent.com/render/math?math=v"> is the number of standard deviations from the mean in the direction of the i-th principal component that you wish to evaluate the shape. Of course the output of this is not a shape, but a vector in principal component space. However, one can unstandardise this vector, and then convert it back to a series of x and y coordinates, corresponding to a shape in original feature space.
