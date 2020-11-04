@@ -23,6 +23,10 @@ With each shape represented by a vector, one can standardise the data before per
 
 ## 2 - Implementation and results
 
-The shape data that I demonstrate this technique on is the shape data of human faces, extracted from 350 facial images. Though I can't show the facial images for anonymity reasons, I can show the mean face, which was taken by morphing each face to the same shape, and taking the mean of the image tensors. The mean facial image and mean facial features are shown below.d
+The shape data I use to demonstrate this technique was used within my MSc dissertation project, and contains the facial images of 86 individuals. Each individual had 2 lab photos, and 2 selfies. Due to privacy, I cannot add these images to this repository, but I can upload their facial features (facial shape), which was extracted using the dlib-ml package.
 
-![First mode of variation](comparison.png?raw=True)
+As well as the data relating to facial shape, I have also uploaded the mean facial shape, and the mean facial image (found by morphing all faces to the same shape, before taking the mean of the image tensors. The mean facial shape and image are shown below.
+
+
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/example_features.png?raw=True)
+![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mean_image.png?raw=True)
