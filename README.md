@@ -28,9 +28,8 @@ The shape data I use to demonstrate this technique was used within my MSc disser
 As well as the data relating to facial shape, I have also uploaded the mean facial shape, and the mean facial image (found by morphing all faces to the same shape, before taking the mean of the image tensors. The mean facial shape and image are shown below.
 
 
-<img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/example_features.png" width="48">
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/example_features.png?raw=True)
-![](https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mean_image.png?raw=True)
+<img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/images/example_features.png" width="400">
+<img src="https://github.com/joebarnes1996/principal-modes-of-facial-variation/blob/master/Data/mean_image.png" width="400">
 
 To demonstrate this technique, the below images show the mean facial image morphed in the directions of +/- 3 standard deviations from the mean in the direction of the first 5 principal components.
 
