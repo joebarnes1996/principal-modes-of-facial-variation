@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 #=============================================================================
 """
-First runIimage_warping_functions.py to get the necessary functions
+First run Image_warping_functions.py to get the necessary functions
 """
 
 
@@ -20,23 +20,34 @@ First runIimage_warping_functions.py to get the necessary functions
 """
 #=============================================================================
 # set the path to the data
-os.chdir(r'C:\Users\joeba\github_projects\PCA_faces\Data')
+path = r'C:\Users\joeba\github_projects\PCA_faces'
 
 # load the data
 facial_features = {}
 
 for i in range(343):
     
-    facial_features[i] = np.loadtxt('{}.txt'.format(i))
+    facial_features[i] = np.loadtxt(path + '/Data/{}.txt'.format(i))
 
 
 
 # load the mean facial images
-os.chdir(r'C:\Users\joeba\github_projects\PCA_faces\Data')
-mean_image = cv2.imread('mean_image.png')
+mean_image = cv2.imread(path + '\Data\mean_image.png')
 mean_image = cv2.cvtColor(mean_image, cv2.COLOR_BGR2RGB)
 
-mean_features = np.loadtxt('mean_features.txt').astype(int)
+mean_features = np.loadtxt(path + '/Data/mean_features.txt').astype(int)
+
+# plot the mean features
+plt.figure(figsize=(6, 8))
+plt.gca().invert_yaxis()
+plt.axis('equal')
+plt.grid()
+plt.scatter(mean_features[:,0], mean_features[:,1])
+plt.xlabel('x-position')
+plt.ylabel('y-position')
+plt.savefig(path + '/images/example_features')
+plt.show()
+
 
 
 # convert all features into an array, X
@@ -163,31 +174,32 @@ NOTE - am demonstrating how the face varies over the first principal
 
 """
 
-# edit the 
-high_image, low_image = modeOfVariation(1, deviation=3)
-
-
-
-
-# visualise the results
-fig, axs = plt.subplots(1, 3, figsize=(15,8))
-axs[0].imshow(high_image)
-axs[0].set_title('High')
-
-axs[1].imshow(mean_image)
-axs[1].set_title('Mean')
-
-
-axs[2].imshow(low_image)
-axs[2].set_title('Low')
-
-plt.tight_layout
-
-# save figure
-os.chdir(r'C:\Users\joeba\github_projects\PCA_faces')
-plt.savefig('comparison')
-
-plt.show()
+# find images for the first 5 modes of variation
+for mode in range(1, 6):
+    
+    # get the high and low images
+    high_image, low_image = modeOfVariation(mode, deviation=3)
+    
+    # visualise the results
+    fig, axs = plt.subplots(1, 3, figsize=(15,8))
+    axs[0].imshow(high_image)
+    axs[0].set_title(r'$\mu+3\sqrt{\lambda_i}\varphi_i$', fontsize=20)
+    
+    axs[1].imshow(mean_image)
+    axs[1].set_title(r'$\mu$', fontsize=20)
+    
+    
+    axs[2].imshow(low_image)
+    axs[2].set_title(r'$\mu-3\sqrt{\lambda_i}\varphi_i$', fontsize=20)
+    
+    fig.suptitle('i = {}'.format(mode), fontsize=30)
+    plt.tight_layout()
+    
+    # save figure
+    os.chdir(r'C:\Users\joeba\github_projects\PCA_faces')
+    plt.savefig(path + '/images/mode_{}'.format(mode))
+    
+    plt.show()
 
 
 

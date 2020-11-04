@@ -1,22 +1,28 @@
 # Principal modes of facial variation
 
-Principal component analysis (PCA) creates vectors which represent the rotation of a coordinate system, such that each successive principal component explains the variance of a data in a direction orthogonal to all other principal components. While this is a powerful technique in the remit of dimensionality reduction, it also has uses in shape analysis.
+## 1 - Introduction and theory
 
-Principal components can be applied to shape data to find the modes in which shapes vary the most. Here, shape data is represented as an array of x and y coordinates, i.e.
+Principal component analysis (PCA) is commonly used as a method of dimensionality reduction, essentially it creates the orthogonal vectors which represent the directions with which the data has the greatest variance. While a less common application, PCA can be used in order to understand the ways in which groups of shapes vary the most.
 
-S = [[x_1, y_1],
-	 [x_2, y_2],
-	 [..., ...],
-	 [x_N, y_N]]
+Shapes can be mathematically represented as an array of x and y pairs. For example, a shape made up of n points could be represented as
 
-where N is the number of coordinates that make up the shapes. 
+        [ x_1 y_1 ]
+    S = [ ... ... ]
+        [ x_n y_n ]
 
-One can convert these shape arrays into vectors, i.e. 
+PCA relies on data being represented as column vectors, hence to perform PCA on shape data, one first has to convert them into column vectors of alternating x and y coordinates, as shown below
 
-S --> S_bar = [x_1, y_1, x_2, y_2, ..., x_N, y_N]
+        [ x_1 ]
+	[ y_1 ]
+    S = [ ... ]
+        [ x_n ]
+	[ y_n ]
 
-It is then possible to perform PCA on these vectors as you would any other data. The principal modes of variation, can be found by varying the mean shape in the directions of each principal component. In principal component space, the mean shape is a column vector of zeros. Hence each mode of variation can be evaluated by transforming a principal component vector, multiplied by some amount, back to a set of x and y coordinates in Euclidean space.
+With each shape represented by a vector, one can standardise the data before performing PCA following standard procedures. Having the principal components of shape data, it is easy to evaluate how shapes vary in the direction of each principal component. For example, the shape vectors across the first principal component can be evaluated as <img src="https://render.githubusercontent.com/render/math?math=\mu \pm v \sqrt{\lambda_i} \varphi_i">, where <img src="https://render.githubusercontent.com/render/math?math=\mu"> is the mean shape (equal to 0 in principal component space), <img src="https://render.githubusercontent.com/render/math?math=\varphi_i"> is the i-th principal component, <img src="https://render.githubusercontent.com/render/math?math=\lambda_i"> is the i-th eigenvalue (variance of the i-th principal component), and <img src="https://render.githubusercontent.com/render/math?math=v"> is the number of standard deviations from the mean in the direction of the i-th principal component that you wish to evaluate the shape. Of course the output of this is not a shape, but a vector in principal component space. However, one can unstandardise this vector, and then convert it back to a series of x and y coordinates, corresponding to a shape in original feature space.
 
-An example of the first mode of variation of the human face is shown below, at +/- 3 standard deviations from the mean.
 
-![First mode of variation](httphttps://github.com/joebarnes1996/principal-modes-of-facial-variation/comparison.png?raw=True)
+## 2 - Implementation and results
+
+The shape data that I demonstrate this technique on is the shape data of human faces, extracted from 350 facial images. Though I can't show the facial images for anonymity reasons, I can show the mean face, which was taken by morphing each face to the same shape, and taking the mean of the image tensors. The mean facial image and mean facial features are shown below.
+
+![First mode of variation](comparison.png?raw=True)
